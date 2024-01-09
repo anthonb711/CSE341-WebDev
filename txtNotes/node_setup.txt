@@ -1,0 +1,18 @@
+1. Initate a new node.js project in a new folder
+ command -> npm init -y
+    This command wil initate NPM (node packes manager) for the project
+2. Install 'express' the web app frame work
+ commmand -> npm install express (sudo maybe needed)
+    This command will install express inside the new project
+
+3. Run the code
+    node app.js will run the code
+
+3. Node Project Structure
+    The project contains
+    ** app.js
+      Will hold Node.js code
+    ** package.json and package-lock.json
+      These files contain information regarding the modules installed in the project. 
+    ** node_modules folder 
+      Which contains the actual module installed inside our projects. 

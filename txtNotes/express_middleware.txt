@@ -1,0 +1,10 @@
+Middleware functions can be used to make changes in the request.reponse lifecycle of the express.
+They execute before sending the response back to the user. Multiple middleware fuctions can be
+chained togeter and the execute in order. 
+
+*** There are 5 types of middleware fuctions.
+    - Application Middleware
+    - Router Middleware
+    - Error-handling Middleware
+    - Built-in Middleware
+    - Third-party Middleware
