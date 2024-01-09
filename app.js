@@ -3,21 +3,21 @@ const app = express (); // app creates an instance of the express module and act
 
 app.get('/', (req, res) => { // This uses the express method 'get()' and we use '/' to create a homepage. Then a callback to define what happens. This case
                              // We are using res which is a response with a closure to send the text as the response. 
-  res.send("Hello");
+  res.send("Kaia Wren Brown");
 });
 
 app.get('/home', (req, res) => {
-res.send("Hello World, This is Home router");
+res.send("Hello, World. This is Home router.");
 });
 app.get('/profile', (req, res) => {
-res.send("Hello World, This is profile router");
+res.send("Hello, World This is Profile router.");
 });
 app.get('/login', (req, res) => {
-res.send("Hello World, This is login router");
+res.send("Hello World This is Login router.");
 });
 
 app.get('/logout', (req, res) => {
-res.send("Hello World, This is logout router, change lives");
+res.send("Hello, World, This is Logout router.");
 });
 
 app.listen(process.env.PORT || 3000, () => {  //Create a port using the listen method in the app (express module)
