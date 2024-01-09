@@ -1,22 +1,13 @@
 const express = require('express');
 const router = express.Router();
+const indexController = require('/..controllers/indexController');
 
 // home route
-router.get('/', (req, res) => { 
-res.send("Kaia Wren Brown");
-});
+router.get('/', indexController.kaiaName);
+router.post('/', indexController.kaiaName);
 
-router.post('/', (req, res) => { 
-  res.send("Kaia Wren Brown");
-  });
-
-  // profile route
-  router.get('/profile', (req, res) => { 
-    res.send("Hello, World, from Profile Route GET");
-    });
-    
-    router.post('/profile', (req, res) => { 
-      res.send("Hello, World, from Profile Route POST");
-      });
+// profile route
+router.get('/', indexController.profiles);
+router.post('/', indexController.profiles);
 
   module.exports = router;
