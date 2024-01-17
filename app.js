@@ -4,12 +4,20 @@ const indexRoutes = require('./routes/index.js');
 const {MongoClient} = require ('mongodb');
 
 async function main() {
-  const uri = 
+  const uri = 'mongodb+srv://CSE341User:pinkFlyingChicken@cse341-contacts.2j9r783.mongodb.net/?retryWrites=true&w=majority';
 const client = new MongoClient (uri);
   try {
     await client.connect();
 
-    await listDatabases(client);
+
+    await createComment(client, {
+      name: "Matthew Hoover",
+      email: "mhoover@gec.com",
+      movie_id: "Fight Club",
+      text: "THIS WAS AWESOME!"
+    })
+
+    await findCommentByName(client, "Matthew Hoover");
 
   } catch (e) {
     console.error(e);
@@ -18,6 +26,21 @@ const client = new MongoClient (uri);
   }
 }
 main().catch(console.error);
+
+async function createComment (client, newComment) {
+  const result = await client.db("sample_mflix").collection("comments").insertOne(newComment);
+  console.log(`New Comment ${result.insertedId}`);
+}
+async function findCommentByName (client, commenterName) {
+  const result = await client.db("sample_mflix").collection("comments").findOne({name: commenterName});
+  if (result) {
+    console.log(`found a result for :${commenterName}`);
+    console.log(result);
+  } else {
+    console.log("No result found");
+  }
+
+}
 
 async function listDatabases(client) {
   const databasesList = await client.db().admin().listDatabases();
