@@ -1,14 +1,18 @@
+const dotenv = require("dotenv");
+dotenv.config();
 const express = require('express'); // Must require a module to use it. Here we require the express module
 const app = express (); // app creates an instance of the express module and acts as a sudo-namespace
 const indexRoutes = require('./routes/index.js');
 const {MongoClient} = require ('mongodb');
 
+
 async function main() {
-  const uri = 'mongodb+srv://CSE341User:pinkFlyingChicken@cse341-contacts.2j9r783.mongodb.net/?retryWrites=true&w=majority';
+  const uri = `mongodb+srv://${process.env.DB_USERNAME}:${process.env.DB_PASSWORD}@cse341-contacts.2j9r783.mongodb.net/?retryWrites=true&w=majority`;
 const client = new MongoClient (uri);
+
+console.log(uri);
   try {
     await client.connect();
-
 
     await createComment(client, {
       name: "Matthew Hoover",
