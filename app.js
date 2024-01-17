@@ -4,9 +4,8 @@ const indexRoutes = require('./routes/index.js');
 const {MongoClient} = require ('mongodb');
 
 async function main() {
-  const uri = "mongodb+srv://<username>:<password>@cse341-contacts.2j9r783.mongodb.net/?retryWrites=true&w=majority";
-
-  const client = new MongoClient (uri);
+  const uri = 
+const client = new MongoClient (uri);
   try {
     await client.connect();
 
