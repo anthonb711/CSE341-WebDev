@@ -5,7 +5,7 @@ const app = express (); // app creates an instance of the express module and act
 const indexRoutes = require('./routes/index.js');
 const {MongoClient} = require ('mongodb');
 
-
+//Test function with playground data for mongoDB .env variables
 async function main() {
   const uri = `mongodb+srv://${process.env.DB_USERNAME}:${process.env.DB_PASSWORD}@cse341-contacts.2j9r783.mongodb.net/?retryWrites=true&w=majority`;
 const client = new MongoClient (uri);
@@ -29,12 +29,17 @@ console.log(uri);
     await client.close();
   }
 }
+
+
 main().catch(console.error);
 
+
+//Test functions with playground data for mongoDB .env variables
 async function createComment (client, newComment) {
   const result = await client.db("sample_mflix").collection("comments").insertOne(newComment);
   console.log(`New Comment ${result.insertedId}`);
 }
+
 async function findCommentByName (client, commenterName) {
   const result = await client.db("sample_mflix").collection("comments").findOne({name: commenterName});
   if (result) {
@@ -43,17 +48,8 @@ async function findCommentByName (client, commenterName) {
   } else {
     console.log("No result found");
   }
-
 }
 
-async function listDatabases(client) {
-  const databasesList = await client.db().admin().listDatabases();
-
-  console.log("Databases:");
-  databasesList.databases.forEach(db => {
-    console.log(`- ${db.name}`);
-  });
-}
 
 app.use('/', indexRoutes);
 
