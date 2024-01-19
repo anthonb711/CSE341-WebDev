@@ -6,8 +6,9 @@ const indexController = require('../controllers/indexController');
 router.get('/', indexController.kaiaName);
 router.post('/', indexController.kaiaName);
 
+
 // profile route
-router.get('/profile', indexController.profiles);
-router.post('/profile', indexController.profiles);
+router.get('/profile', indexController.profile);
+router.post('/profile', indexController.profile);
 
   module.exports = router;
