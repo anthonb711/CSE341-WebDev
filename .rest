@@ -1,0 +1,18 @@
+//GET REQUESTS
+    //LOCALHOST GETS
+GET http://localhost:8080/ HTTP/1.1
+###
+GET http://localhost:8080/profile HTTP/1.1
+
+      // RENDER GETS
+###
+GET https://agbwebdev.onrender.com HTTP/1.1
+
+###
+GET https://agbwebdev.onrender.com/profile HTTP/1.1
+
+
+// POST REQUESTS
+    //LOCALHOST POSTS
+
+    //RENDER POSTS
