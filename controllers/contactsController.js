@@ -18,7 +18,7 @@ const getContacts = async (req, res) => {
 
 const getContact = async (req, res) => {
   const client = new MongoClient (process.env.MONGODB_URI);
-  const contactID = new ObjectId('65ac8e6f57bd07a5627316e2');
+  const contactID = new ObjectId(req.params.id);
 
   try {
     await client.connect();
