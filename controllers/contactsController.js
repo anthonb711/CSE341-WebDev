@@ -1,11 +1,10 @@
 const {MongoClient, ObjectId} = require ('mongodb');
 
-
-
 const getContacts = async (req, res) => {
   const client = new MongoClient (process.env.MONGODB_URI);
   try {
     await client.connect();
+    console.log('Connection to MongoDB: Sucessful!');
     const cursor = await client.db("cse341_proj1").collection('contacts').find();
     const allContacts = await cursor.toArray();
     res.send(allContacts);
@@ -22,6 +21,7 @@ const getContact = async (req, res) => {
 
   try {
     await client.connect();
+    console.log('Connection to MongoDB: Sucessful!');
     const contact  = await client.db("cse341_proj1").collection('contacts').findOne(contactID);
     console.log(contact);
     res.send(contact);
@@ -32,13 +32,4 @@ const getContact = async (req, res) => {
   }
 };
 
-
-
-
-
-/*const getContacts = (req, res) => {
-  res.send('hello from Contacts')
-  //res.send(allContacts);
-};
-*/
 module.exports = { getContacts, getContact };

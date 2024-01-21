@@ -1,6 +1,5 @@
-module.exports = {
-  get: (req, res) => {
-    res.send('HELLO FROM INDEX CONTROLLER GET');
-  }
+const get = (req, res) => {
+  res.send('hello from INDEX controller');
 };
 
+module.exports =  { get }
