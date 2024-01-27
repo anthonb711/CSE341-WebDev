@@ -8,6 +8,20 @@ GET http://localhost:8080/contacts HTTP/1.1
 ###
 GET http://localhost:8080/contacts/65ac8e6f57bd07a5627316e2 HTTP/1.1
 
+//----------------------------------------------------LOCALHOST POSTS
+###
+POST http://localhost:8080/createContact HTTP/1.1
+content-type: application/json
+
+{
+   "fname": "dale",
+    "lname": "parks",
+    "email": "pd@hotmail.com",
+    "fav_color":"purple",
+    "dob": "2024/01/26"
+}
+
+
 
 //----------------------------------------------------RENDER/PROD GETS
 ###

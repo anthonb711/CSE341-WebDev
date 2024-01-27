@@ -1,35 +1,20 @@
-const {MongoClient, ObjectId} = require ('mongodb');
+const mongodb = require('../db/connect');
+const ObjectId = require('mongodb').ObjectId;
 
-const getContacts = async (req, res) => {
-  const client = new MongoClient (process.env.MONGODB_URI);
-  try {
-    await client.connect();
-    console.log('Connection to MongoDB: Sucessful!');
-    const cursor = await client.db("cse341_proj1").collection('contacts').find();
-    const allContacts = await cursor.toArray();
-    res.send(allContacts);
-  } catch (e) {
-    console.error(e);
-  } finally {
-    await client.close();
-  }
+const getContacts = async(req, res, next) => {
+  const cursor = await mongodb.getDb().db("cse341_proj1").collection('contacts').find();
+  const allContacts = await cursor.toArray();
+  res.setHeader('Content-Type', 'application/json');
+  res.status(200).json(allContacts)
+
 };
 
 const getContact = async (req, res) => {
-  const client = new MongoClient (process.env.MONGODB_URI);
   const contactID = new ObjectId(req.params.id);
-
-  try {
-    await client.connect();
-    console.log('Connection to MongoDB: Sucessful!');
-    const contact  = await client.db("cse341_proj1").collection('contacts').findOne(contactID);
-    console.log(contact);
-    res.send(contact);
-  } catch (e) {
-    console.error(e);
-  } finally {
-    await client.close();
-  }
+  const contact  = await mongodb.getDb().db("cse341_proj1").collection('contacts').findOne(contactID);
+  console.log(contact);
+ res.setHeader('Content-Type', 'application/json');
+  res.status(200).json(contact)
 };
 
 module.exports = { getContacts, getContact };
