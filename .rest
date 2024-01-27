@@ -14,14 +14,12 @@ POST http://localhost:8080/createContact HTTP/1.1
 content-type: application/json
 
 {
-   "fname": "dale",
-    "lname": "parks",
-    "email": "pd@hotmail.com",
-    "fav_color":"purple",
+   "fname": "local",
+    "lname": "host",
+    "email": "pd@8080.com",
+    "fav_color":"pink",
     "dob": "2024/01/26"
 }
-
-
 
 //----------------------------------------------------RENDER/PROD GETS
 ###
@@ -34,6 +32,16 @@ GET https://agbwebdev.onrender.com/contacts HTTP/1.1
 GET https://agbwebdev.onrender.com/contacts/65ac8e6f57bd07a5627316e2 HTTP/1.1
 
 
-//----------------------------------------------------LOCALHOST POSTS
-
 //----------------------------------------------------RENDER/PROD POSTS
+POSTS
+###
+POST http://agbwebdev.onrender.com/createContact HTTP/1.1
+content-type: application/json
+
+{
+   "fname": "RENDER",
+    "lname": "PROD",
+    "email": "pd@render.com",
+    "fav_color":"black",
+    "dob": "2024/04/26"
+}

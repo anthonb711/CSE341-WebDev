@@ -10,8 +10,8 @@ const createContact = async (req, res) => {
     dob: req.body.dob
   };
   const insertedContact = await mongodb.getDb().db("cse341_proj1").collection('contacts').insertOne(contact);
-  console.log(res.acknowledged);
-  res.status(200).json(insertedContact)
+  res.status(201).json(insertedContact)
+
 
 };
 
