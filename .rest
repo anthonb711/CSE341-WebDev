@@ -31,7 +31,7 @@ Content-Type: application/json
 //******************************************* PUTS **************************************  //
 
 ### UPDATE A CONTACT BY ID
-PUT http://localhost:8080/updateContact/65b5c30bcff4f08b13db35b6 HTTP/1.1
+PUT http://localhost:8080/updateContact/65b5caf58aff01c568e39fc1 HTTP/1.1
 content-type: application/json
 
 {
@@ -44,7 +44,7 @@ content-type: application/json
 //******************************************* DELETES **************************************  //
 
 ### DELETE A CONTACT BY ID
-DELETE http://localhost:8080/deleteContact/65b5c30bcff4f08b13db35b6 HTTP/1.1
+DELETE http://localhost:8080/deleteContact/65b5caf58aff01c568e39fc1 HTTP/1.1
 
 
 //  *************************************************************************************  //
