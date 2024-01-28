@@ -1,17 +1,24 @@
+//  *************************************************************************************  //
+//  *********************************** LOCALHOST ROUTES ********************************  //
+//  *************************************************************************************  //
 
-//----------------------------------------------------LOCALHOST GETS
+//******************************************* GETS **************************************  //
+
+### HOME
 GET http://localhost:8080/ HTTP/1.1
-###
+### PROFILE
 GET http://localhost:8080/profile HTTP/1.1
-###
+### GET ALL CONTACTS FROM DB
 GET http://localhost:8080/contacts HTTP/1.1
-###
+### GET ONE CONTACTS FROM DB BY ID
 GET http://localhost:8080/contacts/65ac8e6f57bd07a5627316e2 HTTP/1.1
 
-//----------------------------------------------------LOCALHOST POSTS
-###
+
+//************************************ POSTS
+
+### CREATE CONTACT
 POST http://localhost:8080/createContact HTTP/1.1
-content-type: application/json
+Content-Type: application/json
 
 {
    "fname": "local",
@@ -21,20 +28,43 @@ content-type: application/json
     "dob": "2024/01/26"
 }
 
-//----------------------------------------------------RENDER/PROD GETS
-###
+//************************************ PUTS
+
+### UPDATE A CONTACT BY ID
+PUT http://localhost:8080/updateContact/65b58bb02270985529119de2 HTTP/1.1
+content-type: application/json
+
+{
+   "fname": "local UPDATE",
+    "lname": "host UPDATE",
+    "email": "pd@8080.com UPDATE",
+    "fav_color":"pink UPDATE",
+    "dob": "2024/01/26 UPDATE"
+}
+//************************************ DELETES
+
+
+//  *************************************************************************************  //
+//  ********************************** RENDER/PROD ROUTES *******************************  //
+//  *************************************************************************************  //
+
+
+//************************************ GETS
+### HOME
 GET https://agbwebdev.onrender.com/ HTTP/1.1
-###
+### PROFILE
 GET https://agbwebdev.onrender.com/profile HTTP/1.1
-###
+### GET ALL CONTACTS FROM DB
 GET https://agbwebdev.onrender.com/contacts HTTP/1.1
-###
+### GET ONE CONTACTS FROM DB BY ID
 GET https://agbwebdev.onrender.com/contacts/65ac8e6f57bd07a5627316e2 HTTP/1.1
 
 
-//----------------------------------------------------RENDER/PROD POSTS
-POSTS
-###
+
+
+//************************************ POSTS
+
+### CREATE A NEW CONTACT
 POST http://agbwebdev.onrender.com/createContact HTTP/1.1
 content-type: application/json
 
@@ -45,3 +75,19 @@ content-type: application/json
     "fav_color":"black",
     "dob": "2024/04/26"
 }
+
+//************************************ PUTS
+
+### UDPATE A CONTACT BY ID
+PUT http://lagbwebdev.onrender.com/updateContact/65b58bc916601df6d24a53d2 HTTP/1.1
+content-type: application/json
+
+{
+   "fname": "RENDER UPDATE",
+    "lname": "PROD UPDATE",
+    "email": "pd@render.com UPDATE",
+    "fav_color":"black UPDATE",
+    "dob": "2024/04/26 UPDATE"
+}
+
+//************************************ DELETES
