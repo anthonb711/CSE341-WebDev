@@ -5,7 +5,7 @@ const updateContact = async (req, res) => {
     const docID = await new ObjectId(req.params.id);
     
     const theUpdate = {
-    fname: req.body.fname, //req.body.firstName,
+    fname: req.body.fname,
     lname: req.body.lname,
     email: req.body.email,
     fav_color: req.body.fav_color,
