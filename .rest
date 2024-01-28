@@ -23,7 +23,7 @@ Content-Type: application/json
 {
    "fname": "local",
     "lname": "host",
-    "email": "pd@8080.com",
+    "email": "localhost@8080.com",
     "fav_color":"pink",
     "dob": "2024/01/26"
 }
@@ -44,7 +44,7 @@ content-type: application/json
 //************************************ DELETES
 
 ### DELETE A CONTACT BY ID
-DELETE http://localhost:8080/deleteContact/65b58bc916601df6d24a53d2 HTTP/1.1
+DELETE http://localhost:8080/deleteContact/65b5c24ffaff739a08d0126e HTTP/1.1
 
 
 //  *************************************************************************************  //
@@ -96,4 +96,4 @@ content-type: application/json
 //************************************ DELETES
 
 ### DELETE A CONTACT BY ID
-DELETE http://agbwebdev.onrender.com/deleteContact/65b58bc916601df6d24a53d2 HTTP/1.1
+DELETE http://agbwebdev.onrender.com/deleteContact/65b5c24ffaff739a08d0126e HTTP/1.1
