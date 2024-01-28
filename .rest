@@ -17,7 +17,7 @@ GET http://localhost:8080/contacts/65ac8e6f57bd07a5627316e2 HTTP/1.1
 //************************************ POSTS
 
 ### CREATE CONTACT
-POST http://localhost:8080/createContact HTTP/1.1
+POST http://localhost:8080/createContact HTTP/1. 
 Content-Type: application/json
 
 {
@@ -42,6 +42,9 @@ content-type: application/json
     "dob": "2024/01/26 UPDATE"
 }
 //************************************ DELETES
+
+### DELETE A CONTACT BY ID
+DELETE http://localhost:8080/deleteContact/65b58bc916601df6d24a53d2 HTTP/1.1
 
 
 //  *************************************************************************************  //
@@ -79,7 +82,7 @@ content-type: application/json
 //************************************ PUTS
 
 ### UDPATE A CONTACT BY ID
-PUT http://lagbwebdev.onrender.com/updateContact/65b58bc916601df6d24a53d2 HTTP/1.1
+PUT http://agbwebdev.onrender.com/updateContact/65b58bc916601df6d24a53d2 HTTP/1.1
 content-type: application/json
 
 {
@@ -91,3 +94,6 @@ content-type: application/json
 }
 
 //************************************ DELETES
+
+### DELETE A CONTACT BY ID
+DELETE http://agbwebdev.onrender.com/deleteContact/65b58bc916601df6d24a53d2 HTTP/1.1
