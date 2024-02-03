@@ -4,3 +4,4 @@ node_modules
 *.txt
 .eslintrc
 .prettierrc
+.DS_Store
