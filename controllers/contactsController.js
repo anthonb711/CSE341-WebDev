@@ -27,11 +27,11 @@ const getContact = async (req, res) => {
 */
 const createContact = async (req, res) => {
   const contact = {
-    fname: req.body.fname,
-    lname: req.body.lname,
+    firstName: req.body.firstName,
+    lastName: req.body.lastName,
     email: req.body.email,
-    fav_color: req.body.fav_color,
-    dob: req.body.dob
+    favoriteColor: req.body.favoriteColor,
+    birthday: req.body.birthday
   };
   const insertedContact = await mongodb.getDb().db("cse341_proj1").collection('contacts').insertOne(contact);
   res.status(201).json(insertedContact)
@@ -44,11 +44,11 @@ const createContact = async (req, res) => {
 const updateContact = async (req, res) => {
     const docID = await new ObjectId(req.params.id);
     const theUpdate = {
-    firstName: req.body.fname,
-    lastName: req.body.lname,
+    firstName: req.body.firstName,
+    lastName: req.body.lastName,
     email: req.body.email,
-    favoriteColor: req.body.fav_color,
-    birthday: req.body.dob
+    favoriteColor: req.body.favoriteColor,
+    birthday: req.body.birthday
   };
   const updatedContact = await mongodb.getDb().db("cse341_proj1").collection('contacts').replaceOne({_id: docID }, theUpdate);
   res.status(204).send('contact updated');
