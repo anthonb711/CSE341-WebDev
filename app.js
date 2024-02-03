@@ -13,6 +13,8 @@ const swaggerDoc = require('./swagger-output.json');
 
 app.use('/api-docs', swaggerUI.serve, swaggerUI.setup(swaggerDoc));
 app.use(cors());
+app.use(express.json());
+app.use(express.urlencoded({ extended: true}));
 app.use(bodyParser.json());
 app.use((req, res, next) => {
   res.setHeader('Access-Control-Allow-Origin', '*');
