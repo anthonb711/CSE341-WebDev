@@ -24,11 +24,11 @@ POST http://localhost:8080/contacts HTTP/1.
 Content-Type: application/json
 
 {
-   "fname": "local",
-    "lname": "host",
+   "firstName": "local",
+    "lastName": "host",
     "email": "localhost@8080.com",
-    "fav_color":"pink",
-    "dob": "2024/01/26"
+    "favoriteColor":"pink",
+    "birthday": "2024/01/26"
 }
 
 //******************************************* PUTS **************************************  //
@@ -38,11 +38,11 @@ PUT http://localhost:8080/contacts/65bd91c1bd1ba965479e00c9 HTTP/1.1
 content-type: application/json
 
 {
-   "fname": "local UPDATE",
-    "lname": "host UPDATE",
+   "firstName": "local UPDATE",
+    "lastName": "host UPDATE",
     "email": "pd@8080.com UPDATE",
-    "fav_color":"pink UPDATE", 
-    "dob": "2024/01/26 UPDATE"
+    "favoriteColor":"pink UPDATE", 
+    "birthday": "2024/01/26 UPDATE"
 }
 //******************************************* DELETES **************************************  //
 
@@ -78,11 +78,11 @@ POST http://agbwebdev.onrender.com/contacts HTTP/1.1
 Content-Type: application/json
 
 {
-   "fname": "RENDER",
-    "lname": "PROD",
+   "firstName": "RENDER",
+    "lastName": "PROD",
     "email": "pd@render.com",
-    "fav_color":"black",
-    "dob": "2024/04/26"
+    "favoriteColor":"black",
+    "birthday": "2024/04/26"
 }
 
 //******************************************* PUTS **************************************  //
@@ -92,11 +92,11 @@ PUT http://agbwebdev.onrender.com/contacts/65bdcaeb186a26f2c177cb6e HTTP/1.1
 content-type: application/json
 
 {
-   "fname": "RENDER UPDATE",
-    "lname": "PROD UPDATE",
+   "firstName": "RENDER UPDATE",
+    "lastName": "PROD UPDATE",
     "email": "pd@render.com UPDATE",
-    "fav_color":"black UPDATE",
-    "dob": "2024/04/26 UPDATE"
+    "favoriteColor":"black UPDATE",
+    "birthday": "2024/04/26 UPDATE"
 }
 
 //******************************************* DELETES **************************************  //
