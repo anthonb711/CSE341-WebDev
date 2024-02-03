@@ -5,7 +5,7 @@
     "description": "Description",
     "version": "1.0.0"
   },
-  "host": "https://agbwebdev.onrender.com",
+  "host": "agbwebdev.onrender.com",
   "basePath": "/",
   "schemes": [
     "http"
