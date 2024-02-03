@@ -52,19 +52,19 @@
             "schema": {
               "type": "object",
               "properties": {
-                "fname": {
+                "firstName": {
                   "example": "any"
                 },
-                "lname": {
+                "lastName": {
                   "example": "any"
                 },
                 "email": {
                   "example": "any"
                 },
-                "fav_color": {
+                "favoritColor": {
                   "example": "any"
                 },
-                "dob": {
+                "birthday": {
                   "example": "any"
                 }
               }
@@ -113,19 +113,19 @@
             "schema": {
               "type": "object",
               "properties": {
-                "fname": {
+                "firstName": {
                   "example": "any"
                 },
-                "lname": {
+                "lastName": {
                   "example": "any"
                 },
                 "email": {
                   "example": "any"
                 },
-                "fav_color": {
+                "favoriteColor": {
                   "example": "any"
                 },
-                "dob": {
+                "birthday": {
                   "example": "any"
                 }
               }
