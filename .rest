@@ -24,11 +24,11 @@ POST http://localhost:8080/contacts HTTP/1.
 Content-Type: application/json
 
 {
-   "firstName": "local",
-    "lastName": "host",
-    "email": "localhost@8080.com",
-    "favoriteColor":"pink",
-    "birthday": "2024/01/26"
+   "firstName": "Orson",
+    "lastName": "Brown",
+    "email": "orb@8080.com",
+    "favoriteColor":"Red",
+    "birthday": "TBD"
 }
 
 //******************************************* PUTS **************************************  //
